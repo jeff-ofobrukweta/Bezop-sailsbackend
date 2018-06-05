@@ -45,7 +45,7 @@ upload: function  (req, res) {
             console.error('ERROR:', err);
         });
 },
-uploadFiletocloud(req,res){
+async uploadFiletocloud(req,res){
 // Call to /upload via GET is error
 if(req.method === 'GET')
 return res.json({'status':'GET not allowed'});                        
@@ -53,7 +53,7 @@ return res.json({'status':'GET not allowed'});
 let uploadFile = req.file('uploadFile');
 console.log(uploadFile._files);
 //process.exit(1);
-uploadFile.upload(function onUploadComplete(err, files) {
+await uploadFile.upload(function onUploadComplete(err, files) {
 // Files will be uploaded to .tmp/uploads
 console.log("files>>>>?"+JSON.stringify(files,null,2))
 // IF ERROR Return and send 500 error with error
