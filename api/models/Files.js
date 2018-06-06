@@ -5,7 +5,7 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-module.exports.myWonderfulConfig = {
+module.exports = {
 
   attributes: {
     filedir:{
@@ -13,8 +13,7 @@ module.exports.myWonderfulConfig = {
       required: true
     },
     owner:{
-      model:'User',
-      unique: false
+      model:'User'
     }
   }
 };
