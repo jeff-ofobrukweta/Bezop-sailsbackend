@@ -21,6 +21,5 @@ module.exports = {
     connection: 'someMongodbServer'
   },
 
-  port: 8080,
-  hookTimeout: 40000
+  port: 80,
 };
