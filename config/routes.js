@@ -43,6 +43,10 @@ module.exports.routes = {
     controller: 'PassportlogsController',
     action: 'login'
   },
+  'GET /logout': {
+    controller: 'PassportlogsController',
+    action: 'logout'
+  },
   'GET /Allusercred': {
     controller: 'User',
     action: 'Allusercred'

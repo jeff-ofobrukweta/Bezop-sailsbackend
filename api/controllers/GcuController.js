@@ -99,10 +99,6 @@ listFiles:function(req,res){
      .then(results => {
          const files = results[0];
          return res.json(files);
-        //  console.log('Files:');
-        //  files.forEach(file => {
-        //  console.log(file.name);
-        //  });
      })
      .catch(err => {
          console.error('ERROR:', err);
