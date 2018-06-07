@@ -17,7 +17,10 @@
  * The same command-line arguments are supported, e.g.:
  * `node app.js --silent --port=80 --prod`
  */
-
+"use strict";
+var express = require('express');
+var app = express();
+// app.use(require('./lib/appengine-handlers'));
 
 // Ensure we're in the project directory, so cwd-relative paths work as expected
 // no matter where we actually lift from.
