@@ -17,13 +17,13 @@
  */
 var passport = require('passport');
 module.exports.policies = {
-  // '*':[
-  //   //initialize passport
-  //   passport.initialize(),
+  '*':[
+    //initialize passport
+    passport.initialize(),
 
-  //   //Use Passport's built-in sessions
-  //   passport.session()
-  // ]
+    //Use Passport's built-in sessions
+    passport.session()
+  ]
   /***************************************************************************
   *                                                                          *
   * Default policy for all controllers and actions (`true` allows public     *

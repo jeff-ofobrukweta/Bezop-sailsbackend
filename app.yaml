@@ -14,7 +14,10 @@
 # [START app_yaml]
 runtime: nodejs
 env: flex
-
+runtime: nodejs
+vm: true
+env_variables:
+  PORT: 8080
 # This sample incurs costs to run on the App Engine flexible environment. 
 # The settings below are to reduce costs during testing and are not appropriate
 # for production use. For more information, see:

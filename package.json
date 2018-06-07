@@ -48,7 +48,8 @@
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
-    "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
+    "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js",
+    "deploy": "gcloud preview app deploy app.yaml --promote --project newproject-191221"
   },
   "main": "app.js",
   "repository": {
