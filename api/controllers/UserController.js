@@ -14,8 +14,6 @@ module.exports = {
         const phoneNumber = body.phoneNumber;
         const password =body.password;
         const filedir = body.filedir;
-
-        console.log(body)
         Files.create({filedir}).then((result) => {
             body.filedir = result.id;
             return Promise.all([result.id,User.create({firstname,lastname,email,phoneNumber,password})]);
@@ -61,7 +59,6 @@ module.exports = {
 
 	signup(req, res) {
         const body = req.body;
-        console.log(">>>>"+JSON.stringify(body,null,2));
         User.create(body).then((user) => {
             res.json({user:user,message:"thank you for sigining up for cloud clox..!!"});
         }).catch((err) => {
@@ -72,7 +69,6 @@ module.exports = {
     All(req, res){
         const body = req.body;
         User.find(body).then((users)=> {
-        sails.log(users)  
         return res.json(users);
         })
     },
